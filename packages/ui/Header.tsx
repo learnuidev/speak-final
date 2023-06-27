@@ -1,5 +1,5 @@
-import * as React from "react";
+import * as React from 'react'
 
-export const Header = ({ text }: { text: string }) => {
-  return <h1>{text}</h1>;
-};
+export const Header = ({ children, className }: any) => {
+  return <h1 className={className}>{children}</h1>
+}
