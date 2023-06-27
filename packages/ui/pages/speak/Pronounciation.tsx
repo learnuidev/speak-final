@@ -326,9 +326,7 @@ export const Pronounciation = () => {
               <button
                 className='dark:hover:text-white shadow-md px-4 py-1 rounded-full dark:text-gray-600 shadow-md px-4 py-1 rounded-full'
                 onClick={() => {
-                  setLessonIndex(idx =>
-                    idx === 0 ? course?.lessons?.length + 2 : idx - 1
-                  )
+                  setLessonIndex(idx => idx - 1)
                 }}
                 // disabled={lessonIndex === 0}
               >
@@ -344,18 +342,7 @@ export const Pronounciation = () => {
               </button>
             </div>
 
-            <div>
-              <button
-                className='text-4xl dark:hover:text-white shadow-md px-4 py-1 rounded-full dark:text-gray-600 shadow-md px-4 py-1 rounded-full'
-                onClick={() => {
-                  setViewMode('analytics')
-                  //
-                  console.log('SHOW ANALYTICS')
-                }}
-              >
-                <AnalyticsIcon />
-              </button>
-            </div>
+            <div></div>
           </div>
         </div>
 
