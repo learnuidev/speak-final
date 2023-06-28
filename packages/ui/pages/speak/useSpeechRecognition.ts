@@ -7,10 +7,14 @@ import { CloseIcon, Header, NextIcon } from 'ui'
 import { useHistoryStore } from './useHistory'
 
 let recognition: any = null
-if ('webkitSpeechRecognition' in window) {
-  recognition = new webkitSpeechRecognition()
-  recognition.continuous = true
-  recognition.lang = 'zh-ZH'
+try {
+  if (window !== undefined) {
+    recognition = new webkitSpeechRecognition()
+    recognition.continuous = true
+    recognition.lang = 'zh-ZH'
+  }
+} catch (err) {
+  console.log('Server is trying to load windows. Ignore')
 }
 
 import { persist, createJSONStorage } from 'zustand/middleware'

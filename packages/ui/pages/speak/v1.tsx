@@ -97,6 +97,7 @@ export const SpeakPage = () => {
       {lessons?.map((convo: any) => {
         return (
           <button
+            key={JSON.stringify(convo)}
             onClick={() => {
               setLesson(convo?.id)
             }}
